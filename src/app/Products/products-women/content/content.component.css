@@ -1,0 +1,58 @@
+/* Add your styling for product layout here */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .products h1 {
+    color: rgba(173, 0, 0, 1);
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .product {
+    border: 1px solid rgb(108, 2, 2);
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+  
+  /* Styling for realistic buttons and animations */
+  button {
+    border: 5px solid rgba(173, 0, 0, 1); 
+    color: rgba(173, 0, 0, 1);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(108, 2, 2); 
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  button:active {
+    transform: translateY(10px); 
+  }
+  

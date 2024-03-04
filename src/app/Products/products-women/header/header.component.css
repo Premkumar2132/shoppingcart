@@ -1,0 +1,83 @@
+.header ul{
+    text-decoration: none;
+    display: flex;
+    flex-direction:  row;
+    justify-content: space-between;
+}
+.header ul li{
+    list-style-type: none;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
+}
+.header ul li a:hover{
+    color: rgba(173, 0, 0, 1);
+}
+.header ul li .active{
+    color: rgba(173, 0, 0, 1);
+    font-weight: bolder;
+}
+.header ul p{
+    font-size: 35px;
+    margin: 0 !important;
+    letter-spacing: 10px;
+}
+.header ul p a{
+    text-decoration: none;
+    color: white;
+}
+.header {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: transparent;
+    background-image: url('../../../../assets/fm2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.header input {
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    border: none;
+    border-bottom: 1px solid grey;
+    color: white;
+    background-color: transparent;
+    transition: border-bottom 0.3s;
+}
+
+.header input:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+}
+
+
+
+
+.banner{
+    padding-top: 250px;
+    padding-bottom: 250px;
+    text-align: right;
+}
+
+.banner h1{
+    font-size: 50px;
+    color: rgba(173, 0, 0, 1);
+    font-weight: bold;
+}
+
+.banner h3{
+    font-size: 30px;
+    font-weight: 500
+}

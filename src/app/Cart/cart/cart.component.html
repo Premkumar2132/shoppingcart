@@ -1,0 +1,34 @@
+<div class="cart">
+    <h1>SHOPPING BAG</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of cartItems">
+                <td><img [src]="cart.image" alt="Product Image" height="150px" width="auto"></td>
+                <td>{{ cart.title }}</td>
+                <td>{{ cart.brand }}</td>
+                <td>{{ cart.price }}</td>
+                <td>
+                    <div class="quantity">
+                        <button (click)="decreaseQuantity(cart)" class="quantity-btn">-</button>
+                        <span>{{ cart.quantity }}</span>
+                        <button (click)="increaseQuantity(cart)" class="quantity-btn">+</button>
+                        <button (click)="removeItem(cart)" class="remove-btn">Remove</button> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>Total Price:</strong></td>
+                <td>{{ totalPrice | currency : "INR" }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

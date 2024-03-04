@@ -1,0 +1,18 @@
+
+<div class="products">
+    <h1>POPULAR PRODUCTS</h1>
+    <div class="row" *ngFor="let row of productRows">
+      <div class="col" *ngFor="let product of row">
+        <div class="product">
+          <img [src]="product.image" alt="Product Image">
+          <h3>{{ product.title }}</h3>
+          <p>Brand: {{ product.brand }}</p>
+          <p>Price: {{ product.price | currency : "INR" }}</p>
+          <div class="buttons">
+            <button (click)="addToCart(product)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,67 @@
+h1{
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    color: rgba(173, 0, 0, 1);
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: rgba(173, 0, 0, 1);
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.quantity button {
+    border: 1px solid rgba(173, 0, 0, 1);
+    color: rgba(173, 0, 0, 1);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.quantity button:hover {
+    background-color: rgba(173, 0, 0, 1);
+    color: white;
+    transform: scale(1.1);
+}
+
+.quantity span {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+tbody tr:hover {
+    background-color: rgba(173, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}

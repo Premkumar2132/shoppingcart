@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <form *ngIf="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h1>Sign Up</h1>
+    <div class="input-box">
+      <input type="text" formControlName="username" placeholder="Username" required />
+      <i class='bx bxs-user'></i>
+    </div>
+    <div *ngIf="registerForm.get('username')?.errors?.['pattern'] && registerForm.get('username')?.touched"
+         class="error">Username should contain letters only.</div>
+    <div class="input-box">
+      <input type="email" formControlName="email" placeholder="Email Address" required />
+      <i class='bx bx-envelope'></i>
+    </div>
+    <div *ngIf="registerForm.get('email')?.errors?.['email'] && registerForm.get('email')?.touched"
+         class="error">Enter a valid email.</div>
+    <div class="input-box">
+      <input type="password" formControlName="password" placeholder="Password" required />
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <div *ngIf="registerForm.get('password')?.errors?.['required'] && registerForm.get('password')?.touched"
+         class="error">Password is required.</div>
+    <div *ngIf="registerForm.get('password')?.errors?.['minlength'] && registerForm.get('password')?.touched"
+         class="error">Password must be at least 8 characters long.</div>
+    <div *ngIf="registerForm.get('password')?.errors?.['pattern'] && registerForm.get('password')?.touched"
+         class="error">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.</div>
+    <div class="input-box">
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required />
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <div *ngIf="registerForm.hasError('notSame') && registerForm.get('confirmPassword')?.touched"
+         class="error">Passwords do not match.</div>
+    <button type="submit" class="btn">Sign Up</button>
+    <div class="register-link">
+      <p>Already have an account? <a routerLink="/login">Login</a></p>
+    </div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </form>
+</div>
